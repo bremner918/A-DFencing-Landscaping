@@ -23,8 +23,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Assemble site
         run: |
-          mkdir public
-          cp -r index.html fencing css js images favicon.svg robots.txt sitemap.xml public/
+          mkdir -p public
+          cp -r index.html fencing css js favicon.svg robots.txt sitemap.xml public/
+          if [ -d images ]; then cp -r images public/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
