@@ -1,0 +1,71 @@
+:root{--ink:#14201f;--estuary:#1e2f33;--moss:#3f5b3a;--timber:#b8863b;--chalk:#f2f4ef;--line:#d5dbd2;--max:68rem}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--chalk)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--moss)}
+:focus-visible{outline:3px solid var(--timber);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:20}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:10;background:var(--estuary);color:var(--chalk)}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;padding-block:.75rem}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em;color:var(--chalk);text-decoration:none}
+.site-nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;margin:0;padding:0;list-style:none}
+.site-nav a{color:var(--chalk);text-decoration:none;padding:.4rem 0;display:inline-block}
+.site-nav a:hover{color:var(--timber)}
+.nav-toggle{display:none;background:none;border:2px solid var(--chalk);color:var(--chalk);padding:.35rem .8rem;font:inherit;cursor:pointer}
+@media (max-width:48rem){
+  .js .nav-toggle{display:inline-flex}
+  .js .site-nav{display:none;width:100%}
+  .js .site-nav.is-open{display:block}
+  .site-nav ul{flex-direction:column}
+}
+
+/* Hero: feather-edge fence boards with a rail */
+.hero{color:var(--chalk);padding-block:clamp(3.5rem,10vw,7rem);
+  background:
+    linear-gradient(to bottom,transparent 0 66%,rgba(184,134,59,.4) 66% 69%,transparent 69%),
+    repeating-linear-gradient(90deg,#1e2f33 0 2.4rem,#162528 2.4rem 2.5rem)}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.2rem,6vw,3.9rem);line-height:1.05;letter-spacing:-.02em;font-weight:800;max-width:20ch}
+.hero p{max-width:46ch;margin:0 0 1.75rem;font-size:1.15rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--timber);background:var(--timber);color:var(--ink);cursor:pointer}
+.btn:hover{background:#cc9a4d}
+.btn.ghost{background:transparent;color:var(--chalk)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* Sections */
+.section{padding-block:clamp(3rem,7vw,5rem)}
+.section.alt{background:#e6eae1}
+h2{margin:0 0 1rem;font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;letter-spacing:-.01em}
+h3{margin:0 0 .4rem;font-size:1.25rem}
+.prose{max-width:62ch}
+.services{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-top:1.5rem}
+.service{border-top:5px solid var(--timber);padding-top:1rem}
+.service p{margin:0 0 .5rem}
+.areas{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:1rem 0 0;list-style:none}
+.areas li{border:1px solid var(--moss);padding:.2rem .8rem}
+
+/* Gallery */
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));margin:1.5rem 0 0;padding:0;list-style:none}
+.gallery figure{margin:0;aspect-ratio:4/3;background:var(--line);overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover}
+
+/* Contact */
+.contact-grid{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+address{font-style:normal}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.3rem;font-weight:600}
+input,textarea{font:inherit;padding:.7rem;border:2px solid var(--moss);background:#fff;color:var(--ink);width:100%}
+textarea{min-height:9rem;resize:vertical}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.form-status{margin:0;font-weight:600}
+.form-status.is-ok{color:var(--moss)}.form-status.is-error{color:#9b1c1c}
+
+/* Footer */
+.site-footer{background:var(--estuary);color:var(--chalk);padding-block:1.5rem;font-size:.95rem}
+.site-footer a{color:var(--chalk)}
