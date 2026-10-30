@@ -2,6 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fencing &amp; Landscaping in Exmouth, Devon | A&amp;D Fencing &amp; Landscaping</title>
   <meta name="description" content="Local fencing, decking, paving and hedge maintenance contractors in Exmouth and East Devon since 2002. Call or get a no-obligation quote.">
@@ -23,7 +24,8 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="fencing/index.html">A&amp;D Fencing &amp; Landscaping</a>
+      <a class="brand" href="./">A&amp;D Fencing &amp; Landscaping</a>
+      <a class="btn sm header-call" href="tel:+447766557522">Call us</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
@@ -39,12 +41,16 @@
   <main id="main">
     <section class="hero">
       <div class="wrap">
-        <h1>Fencing and landscaping in Exmouth and East Devon</h1>
-        <p>Working with you to create your ideal landscape space. Locally based and established in 2002.</p>
-        <div class="actions">
-          <a class="btn" href="#contact">Get a free quote</a>
-          <a class="btn ghost" href="tel:+447766557522">Call 07766 557522</a>
+        <div>
+          <h1>Fencing and landscaping in Exmouth and East Devon</h1>
+          <p class="lead">Working with you to create your ideal landscape space.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Get a free quote</a>
+            <a class="btn line" href="tel:+447766557522">Call 07766 557522</a>
+          </div>
+          <ul class="facts"><li>Established 2002</li><li>No-obligation quotes</li><li>Locally based</li></ul>
         </div>
+        <div class="hero-media" role="img" aria-label="Fencing and landscaping work in East Devon"></div>
       </div>
     </section>
 
@@ -52,10 +58,10 @@
       <div class="wrap">
         <h2>What we do</h2>
         <div class="services">
-          <div class="service"><h3><a href="fencing/index.html">Fencing</a></h3><p>Feather edge boundary fences, replacement fencing and garden gates.</p></div>
-          <div class="service"><h3>Decking</h3><p>Timber and composite decking built to suit your garden.</p><a href="#contact">Ask about decking</a></div>
-          <div class="service"><h3>Paving and patios</h3><p>New patios and paving to transform your outdoor space.</p><a href="#contact">Ask about paving</a></div>
-          <div class="service"><h3>Hedge maintenance</h3><p>Regular hedge cutting and tidying.</p><a href="#contact">Ask about hedges</a></div>
+          <a class="service featured" href="fencing/index.html"><h3>Fencing</h3><p>Feather edge boundary fences, replacement fencing and garden gates.</p><span class="more">View fencing</span></a>
+          <a class="service" href="#contact"><h3>Decking</h3><p>Timber and composite decking built to suit your garden.</p><span class="more">Ask about decking</span></a>
+          <a class="service" href="#contact"><h3>Paving and patios</h3><p>New patios and paving to transform your outdoor space.</p><span class="more">Ask about paving</span></a>
+          <a class="service" href="#contact"><h3>Hedge maintenance</h3><p>Regular hedge cutting and tidying.</p><span class="more">Ask about hedges</span></a>
         </div>
       </div>
     </section>
@@ -77,19 +83,23 @@
     </section>
 
     <section class="section" id="about">
-      <div class="wrap prose">
-        <h2>About A&amp;D Fencing &amp; Landscaping</h2>
-        <p>We are an established, locally based fencing and landscaping contractor serving Exmouth and the surrounding areas of East Devon.</p>
-        <p>Established in 2002, we help homeowners improve their outdoor spaces with quality fencing installations, garden gates, timber and composite decking, patios, paving and hedge maintenance.</p>
-        <p>Whether you need an existing garden fence replaced, a new feather edge boundary fence installed, composite decking built or your garden transformed with new paving, we provide a practical, tailored service to suit your property and requirements.</p>
-        <h3>Areas we cover</h3>
-        <ul class="areas"><li>Exmouth</li><li>Budleigh Salterton</li><li>Woodbury</li><li>Sidmouth</li><li>Exeter</li></ul>
+      <div class="wrap about">
+        <div>
+          <h2>About A&amp;D Fencing &amp; Landscaping</h2>
+          <h3>Areas we cover</h3>
+          <ul class="areas"><li>Exmouth</li><li>Budleigh Salterton</li><li>Woodbury</li><li>Sidmouth</li><li>Exeter</li></ul>
+        </div>
+        <div class="prose">
+          <p>We are an established, locally based fencing and landscaping contractor serving Exmouth and the surrounding areas of East Devon.</p>
+          <p>Established in 2002, we help homeowners improve their outdoor spaces with quality fencing installations, garden gates, timber and composite decking, patios, paving and hedge maintenance.</p>
+          <p>Whether you need an existing garden fence replaced, a new feather edge boundary fence installed, composite decking built or your garden transformed with new paving, we provide a practical, tailored service to suit your property and requirements.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section alt" id="contact">
+    <section class="section contact" id="contact">
       <div class="wrap contact-grid">
-        <div>
+        <div class="contact-info">
           <h2>Get a no-obligation quote</h2>
           <p>Tell us about your project and we will get back to you.</p>
           <address>
@@ -105,7 +115,6 @@
           <label>Subject <input name="subject" maxlength="150"></label>
           <label>Message <textarea name="message" maxlength="3000" required></textarea></label>
           <div class="hp" aria-hidden="true"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
-          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div>
           <button class="btn" type="submit">Send message</button>
           <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
